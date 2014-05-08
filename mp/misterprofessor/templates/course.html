@@ -1,0 +1,12 @@
+{% extends "menu.html" %}
+
+{% block content %}
+	{{ teacher }}
+	{{ teacher.skype }}
+	{% for l in lessons %}
+		{{l.description}}
+		{{l.name}}
+	{% endfor %}
+	{{ course }}
+	<a href="{%url 'subscription' code=2%}">Subscription</a>
+{% endblock %}

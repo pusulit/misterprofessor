@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+	{% for me in menuelements %}
+		<li><a href="{%url me.link %}">{{ me.text }}</a></li>
+	{% endfor %}
+{% endblock %}
